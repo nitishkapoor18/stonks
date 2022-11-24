@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <script src="login.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="bg-img"></div>
+
+    <div class="navbar">
+      <div class="nav-logo"><span class="logo-text">Stonks</span></div>
+      <div class="nav-cta">
+        <button class="nav-btn-login" onclick="scrollToSectionTwo()">
+          Login
+        </button>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="hero">
+        <div class="hero-cta">
+          <div>
+            <p>STONKS</p>
+            <span
+              >The best tools to help you invest and grow your portfolio</span
+            >
+          </div>
+          <button class="cta-button" onclick="scrollToSectionTwo()">
+            Get Started
+          </button>
+        </div>
+        <div class="hero-img">
+          <img src="hero-img.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="section-2" class="section">
+      <div>
+        <div class="background">
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+        <form id="form" action="" onsubmit="handleSubmit(event)">
+          <h3>Login/Signup</h3>
+          <label for="username">Username</label>
+          <input type="text" placeholder="Username" id="username" required />
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" id="email" required />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+          <div class="msg-div"><span id="message"></span></div>
+          <div class="form-btns">
+            <button id="btn-login" class="form-btn-login">Log In</button>
+            <button id="btn-signup" class="form-btn-signup">SignUp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

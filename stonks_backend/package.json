@@ -1,0 +1,24 @@
+{
+  "name": "stonks_backend",
+  "version": "1.0.0",
+  "description": "API backend for stonks app",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main",
+    "dev": "nodemon main"
+  },
+  "author": "Nitish Kapoor, 0xPiyush",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.1.1",
+    "@fastify/jwt": "^6.3.2",
+    "@fastify/postgres": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.9.2",
+    "pg": "^8.8.0"
+  }
+}

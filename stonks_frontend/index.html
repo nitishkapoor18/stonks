@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <title>Stonks</title>
+    <div id="bg">
+      <div class="navbar">
+        <div class="nav-logo"><span class="logo-text">Stonks</span></div>
+        <div class="nav-links">
+          <a href="#graph">Chart</a>
+          <a href="#box">Stock Score</a>
+          <a href="#prt">Portfolio</a>
+          <a href="form.html">Contact us</a>
+        </div>
+        <div class="nav-cta">
+          <span class="welcome-text" id="welcome-text">Welcome, <span id="username" class="username-text">Nitish</span></span>
+          <button id="btn-logout" class="nav-btn-logout" onclick="logout()">
+            Logout
+          </button>
+        </div>
+      </div>
+      <img id="bg-svg" src="bg.svg" alt="" srcset="">
+      <div id="txt">
+        <style>
+          
+          .cont{
+            display: inline-block;
+
+          }
+          .typed-out{
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            animation: 
+            typing 1s steps(20, end) forwards;
+            
+            width: 0;
+            
+            color: white;
+            /* background: linear-gradient(to right, rgb(255, 188, 255), rgb(172, 172, 255)); */
+            padding: 10px;
+            /* border-radius: 10px; */
+            font-weight: bold;
+            font-family: 'tradegothiclt-bold', sans-serif;
+            animation-iteration-count: infinite;
+            animation-duration: 4s;
+            font-size: large;
+            animation-timing-function:ease-in-out;
+          }
+          @keyframes typing {
+            0% { width: 0 }
+            50% { width: 100% }
+            100% { width: 0 }
+          }
+        </style>
+      <h1 style="font-weight: bold; text-transform: uppercase; font-size: 5em; margin: 0%; filter: drop-shadow(10px 10px 4px #4444dd);">STONKS</h1>
+      <div class="cont">
+        <div class="typed-out">The <span style="color: gold; font-weight: 700;">Best</span> Stock Research and Market Analysis Platform</div>
+      </div>
+
+      </div>
+    </div>
+    
+  </head>
+  <body>
+
+    <!-- TradingView Widget BEGIN -->
+    <div id="graph" class="full-height">
+      <div class="tradingview-widget-container">
+        <div id="tradingview_e0056"></div>
+        <div class="tradingview-widget-copyright"></div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/tv.js"
+        ></script>
+        <script type="text/javascript">
+          new TradingView.widget({
+            width: "100%",
+            height: "100%",
+            symbol: "NASDAQ:AAPL",
+            interval: "D",
+            timezone: "Etc/UTC",
+            theme: "dark",
+            style: "2",
+            margin: "0",
+            padding: "0",
+            locale: "in",
+            toolbar_bg: "#f1f3f6",
+            enable_publishing: false,
+            withdateranges: true,
+            hide_side_toolbar: false,
+            allow_symbol_change: true,
+            details: true,
+            hotlist: true,
+            container_id: "tradingview_e0056",
+          });
+        </script>
+      </div>
+    </div>
+    <div class="maindiv">
+      <div id="forex">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"></div>
+          <script
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js"
+            async
+          >
+              {
+              "colorTheme": "dark",
+              "dateRange": "12M",
+              "exchange": "BSE",
+              "showChart": true,
+              "locale": "in",
+              "largeChartUrl": "",
+              "isTransparent": false,
+              "showSymbolLogo": false,
+              "showFloatingTooltip": false,
+              "width": "400",
+              "height": "600",
+              "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+              "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+              "gridLineColor": "rgba(240, 243, 250, 0)",
+              "scaleFontColor": "rgba(106, 109, 120, 1)",
+              "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+              "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+              "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+              "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+              "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
+            }
+          </script>
+        </div>
+      </div>
+      
+<div id="box">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img id="ing" src="https://i.kym-cdn.com/entries/icons/original/000/029/959/Screen_Shot_2019-06-05_at_1.26.32_PM.jpg" border-radius: 15px; alt="Avatar" style="width:100%;height:100%;">
+        
+      </div>
+      <div class="flip-card-back">
+        
+        <div id="calculator">
+          <h1>Welcome</h1>
+          
+        
+          
+          <h3>Let's check your stock's score</h3>
+          <table>
+            <tr>
+              <th> <input type="text" placeholder="Enter PE Ratio" id="pe" required value=""></th>
+            </tr>
+            <tr>
+              
+              <th><input type="text" placeholder="Enter Current Ratio"  id="current"></th>
+            </tr>
+            <tr>
+  
+              <th>
+                <input type="text" placeholder="Enter PB Ratio" id="pb" value="">
+              </th>
+            </tr>
+            <tr>
+              
+              <th>
+                <input  type="text" placeholder="Intrest Coverage Ratio" id="intrest">
+              </th>
+      
+            </table>
+            
+            <button id= "sub"onclick="myFunction()">SCORE</button>
+        <h2 id="result"></h2>
+        <script>
+          function myFunction() {
+           
+            var pe =document.getElementById("pe").value;
+            var current =document.getElementById("current").value;
+            var pb =document.getElementById("pb").value;
+            var intrest =document.getElementById("intrest").value;
+            document.getElementById("result").innerHTML = (3-current)*10 + (30-pe)*10 + (10-pb)*10 + (intrest-2)*10
+          }
+          </script>
+        
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>
+  
+        
+
+      <div id="sell">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"></div>
+          <script
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+            async
+          >
+              {
+              "interval": "1m",
+              "width": "400",
+              "isTransparent": false,
+              "height": "600",
+              "symbol": "NASDAQ:AAPL",
+              "showIntervalTabs": true,
+              "locale": "in",
+              "colorTheme": "dark"
+            }
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+      </div>
+    </div>
+
+ <div class="money">
+  <h1 style="color: white;">
+  Portfolio
+  </h1>
+ </div>
+
+    <div id="prt" class="cardss">
+     <div class="single">
+      <p
+        class="sc-embed"
+        data-width="200px"
+        data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22ADANIENT%22%7D%5D"
+        data-cardsize="small"
+        data-withtt="false"
+        data-withsearch="false"
+        style="
+          width: 100px;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        
+      </p>
+      <script async src="https://www.gateway-tt.in/assets/embed.js"></script>
+    </div>
+    <div class="single">
+      <p
+        class="sc-embed"
+        data-width="200px"
+        data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22AXISBANK%22%7D%5D"
+        data-cardsize="small"
+        data-withtt="false"
+        data-withsearch="true"
+        style="
+          width: 100px;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        
+      </p>
+      <script async src="https://www.gateway-tt.in/assets/embed.js"></script>
+    </div>
+    <div class="single">
+      <p
+        class="sc-embed"
+        data-width="200px"
+        data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22JSWSTEEL%22%7D%5D"
+        data-cardsize="small"
+        data-withtt="false"
+        data-withsearch="true"
+        style="
+          width: 100px;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+      
+    </p>
+    <script async src="https://www.gateway-tt.in/assets/embed.js"></script>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="money">
+  <h2 id="invested" style="color: white;font-weight: bold;">Your Invested ammount is ₹0</h2>
+</div>
+<div class="sldr">
+  <input type="range" id="range" min="0" max="1000" value="0" class="range blue" oninput="myFunction()"/>
+  
+  
+  
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("range");
+    var defaultVal = x.defaultValue;
+    var currentVal = x.value;
+    var inv =((x.value*1000)/5);
+    var adani = (inv*2576.85)/100;
+    var axis = (inv*61.04)/100;
+    var jsw = (inv*165.41)/100;
+    var mind = (inv*615.18)/100;
+    var apolo = (inv*329.39)/100;
+    var total = adani+axis+jsw+mind+apolo;
+    let dollarIndianLocale = Intl.NumberFormat('en-IN');
+    let demo = document.getElementById("demo");
+    document.getElementById("invested").innerHTML = 'Your Invested ammount is ₹'+dollarIndianLocale.format(currentVal*1000);
+    demo.innerHTML = '₹' + dollarIndianLocale.format(total);
+    demo.style.fontSize = currentVal/10 + "px";
+    document.getElementById("tx").innerHTML = 'Potential GAINS in a 5 year investment'
+    }
+  </script>
+<style>
+ 
+.range {
+-webkit-appearance: none;
+-moz-appearance: none;
+position: absolute;
+left: 50%;
+top: 50%;
+width: 400px;
+margin-top: 10px;
+transform: translate(-50%, -50%);
+}
+input[type=range]::-webkit-slider-runnable-track {
+-webkit-appearance: none;
+background: rgba(59,173,227,1);
+background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+height: 2px;
+}
+input[type=range]:focus {
+outline: none;
+}
+input[type=range]::-moz-range-track {
+-moz-appearance: none;
+background: rgba(59,173,227,1);
+background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+height: 2px;
+}
+input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+border: 2px solid;
+border-radius: 50%;
+height: 25px;
+width: 25px;
+max-width: 80px;
+position: relative;
+bottom: 11px;
+background-color: #1d1c25;
+cursor: -webkit-grab;
+-webkit-transition: border 1000ms ease;
+transition: border 1000ms ease;
+}
+input[type=range]::-moz-range-thumb {
+-moz-appearance: none;
+border: 2px solid;
+border-radius: 50%;
+height: 25px;
+width: 25px;
+max-width: 80px;
+position: relative;
+bottom: 11px;
+background-color: #1d1c25;
+cursor: -moz-grab;
+-moz-transition: border 1000ms ease;
+transition: border 1000ms ease;
+}
+.range.blue::-webkit-slider-thumb {
+border-color: rgb(59,173,227);
+}
+.range.ltpurple::-webkit-slider-thumb {
+border-color: rgb(87,111,230);
+}
+.range.purple::-webkit-slider-thumb {
+border-color: rgb(152,68,183);
+}
+.range.pink::-webkit-slider-thumb {
+border-color: rgb(255,53,127);
+}
+.range.blue::-moz-range-thumb {
+  border-color: rgb(59,173,227);
+}
+.range.ltpurple::-moz-range-thumb {
+border-color: rgb(87,111,230);
+}
+
+.range.purple::-moz-range-thumb {
+  border-color: rgb(152,68,183);
+}
+.range.pink::-moz-range-thumb {
+  border-color: rgb(255,53,127);
+}
+input[type=range]::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+input[type=range]::-moz-range-thumb:active {
+cursor: -moz-grabbing;
+}
+</style>
+</div>
+<div class="money">
+  <h2 id="tx" style="color: white; font-weight: bolder;">Potential GAINS in a 5 year investment</h2>
+  </div>
+  <div class="money">
+  <h2 id="demo" style="color: #85bb65; font-weight: bolder; font-size: 0px; margin: 0;">
+    ₹0
+  </h2>
+</div>
+
+
+<div class="cardss">
+  <div class="single">
+      <p
+        class="sc-embed"
+        data-width="200px"
+        data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22MINDTREE%22%7D%5D"
+        data-cardsize="small"
+        data-withtt="false"
+        data-withsearch="true"
+        style="
+          width: 100px;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        
+      </p>
+      <script async src="https://www.gateway-tt.in/assets/embed.js"></script>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+    <div class="single">
+      <p
+        class="sc-embed"
+        data-width="200px"
+        data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22APOLLOHOSP%22%7D%5D"
+        data-cardsize="small"
+        data-withtt="false"
+        data-withsearch="true"
+        style="
+          width: 100px;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        
+      </p>
+      <script async src="https://www.gateway-tt.in/assets/embed.js"></script>
+    </div>
+  </div>
+  <!-- <div class="money"><h1 id="demo" style="color: white; background-color: green;">.</h1></div> -->
+  <br>
+</div>
+    <!-- TradingView Widget BEGIN -->
+    <div class="ticker tradingview-widget-container" style="background-color:white;">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright"></div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async
+      >
+          {
+          "symbols": [
+            {
+              "proName": "FOREXCOM:SPXUSD",
+              "title": "S&P 500"
+            },
+            {
+              "proName": "FOREXCOM:NSXUSD",
+              "title": "US 100"
+            },
+            {
+              "proName": "FX_IDC:EURUSD",
+              "title": "EUR/USD"
+            },
+            {
+              "proName": "BITSTAMP:BTCUSD",
+              "title": "Bitcoin"
+            },
+            {
+              "proName": "BITSTAMP:ETHUSD",
+              "title": "Ethereum"
+            }
+          ],
+          "showSymbolLogo": true,
+          "colorTheme": "light",
+          "isTransparent": true,
+          "displayMode": "adaptive",
+          "locale": "in"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </body>
+</html>

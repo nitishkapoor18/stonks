@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: hsl(191, 100%, 86%);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to right, #0693e3, #9606e3);
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+.money {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+#bg {
+  height: 100%;
+  background-repeat: no-repeat;
+  background: linear-gradient(to right, #43baff, #b835ff);
+}
+
+#bg-svg {
+  height: 110%;
+  width: 100%;
+}
+
+#txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#welcome {
+  color: white;
+  position: relative;
+}
+.cardss {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+.sldr {
+  display: flex;
+  position: relative;
+}
+#val {
+  position: relative;
+  display: block;
+}
+.maindiv {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#home {
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+.full-height {
+  height: 100%;
+}
+#result {
+  color: white;
+  margin: 0;
+  font-size: 42px;
+  z-index: 1;
+}
+#sub {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin: 38px;
+  text-align: center;
+  width: 80%;
+}
+
+#calculator {
+  color: white;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  position: relative;
+  margin: 8px 0;
+  left: 40%;
+  align-items: center;
+  color: white;
+  background-color: #303245;
+  border-radius: 15px;
+  border: none;
+}
+#ing {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 550px;
+  border-radius: 15px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+@media only screen and (max-width: 600px) {
+  .flip-card {
+    background-color: transparent;
+    height: 667.2px;
+    border-radius: 15px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 15px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 15px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #15172b;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 0px 20px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border: white 3px dashed;
+  cursor: pointer;
+}
+
+.nav-logo:hover {
+  border-width: 3px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-left: 8%;
+}
+
+.nav-links > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0px 5px;
+}
+
+.nav-links > a {
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 0),
+      rgba(100, 200, 200, 0)
+    ),
+    linear-gradient(to right, #c53fff, #ffb23f);
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.nav-links > a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.nav-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn-logout {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(to right, #9606e3, #5b06e3);
+  background-size: 200px;
+  border: white 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  display: none;
+}
+
+.nav-btn-logout:hover {
+  background-position: 100px;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 1rem;
+  display: none;
+}
+
+.username-text {
+  white-space: nowrap;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  font-size: 1.2rem;
+}
+
+section {
+  margin: 0em 10em 10em 10em;
+  padding: 3em 10em 3em 10em;
+}
+
+p {
+  color: #111;
+  font-family: "Calibri", sans-serif;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+hr {
+  background-color: #000;
+}
+
+.ticker {
+  height: 44px !important;
+}
